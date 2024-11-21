@@ -1,0 +1,18 @@
+.titulo_principal{
+    text-align: center;
+    background-color: rgb(236, 153, 123);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black ;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px  white;
+}
+p{
+    text-align: center;
+}
+
+body{
+   background-color: rgb(189, 189, 189);
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
