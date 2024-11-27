@@ -1,29 +1,21 @@
-var carouselBrasil = document.getElementById('carouselBrasil');
-var carousel = new bootstrap.Carousel(carouselBrasil, {
-    interval: 2000,
-    pause: false,
-    ride: false
-});
+function initializeCarousel(carouselId) {
+    var carouselElement = document.getElementById(carouselId);
+    var carousel = new bootstrap.Carousel(carouselElement, {
+        interval: 2000,
+        pause: false,
+        ride: false
+    });
 
-carouselBrasil.addEventListener('mouseenter', function () {
-    carousel.cycle();
-});
+    carouselElement.addEventListener('mouseenter', function () {
+        carousel.cycle();
+    });
 
-carouselBrasil.addEventListener('mouseleave', function () {
-    carousel.pause();
-});
+    carouselElement.addEventListener('mouseleave', function () {
+        carousel.pause();
+    });
+}
 
-var carouselItalia = document.getElementById('carouselItalia');
-var carousel = new bootstrap.Carousel(carouselItalia, {
-    interval: 2000,
-    pause: false,
-    ride: false
-});
-
-carouselItalia.addEventListener('mouseenter', function () {
-    carousel.cycle();
-});
-
-carouselItalia.addEventListener('mouseleave', function () {
-    carousel.pause();
-});
+initializeCarousel('carouselBrasil');
+initializeCarousel('carouselItalia');
+initializeCarousel('carouselChina');
+initializeCarousel('carouselJapao');
