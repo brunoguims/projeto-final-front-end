@@ -1,11 +1,12 @@
 .titulo_principal{
     text-align: center;
-    background-color: rgb(236, 153, 123);
+    background-color: #FF8C42;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px black ;
+    box-shadow: 2px 2px 2px #333333;
     font-family: 'Times New Roman', Times, serif;
     text-shadow: 2px 2px 2px  white;
     size: 20px;
+    color: #333333;
 }
 p{
     text-align: center;
@@ -17,11 +18,13 @@ h2{
 
 h3{
     text-align: center;
-    color: black;
+    color: #333333;
 }
 .card-title{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #333333;
 }
 .card-body{
     text-align: center;
@@ -32,6 +35,7 @@ h3{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
+
 body{
    background-color: rgb(189, 189, 189);
     background-size: cover; 
@@ -42,7 +46,8 @@ body{
 .subtitulo_principal {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 20px;
+    margin-top: 23px;
+    color: #333333;
 }
 
 .container {
@@ -77,4 +82,9 @@ body{
 
 .card-body {
     padding: 10px;
+}
+
+.card-img{
+    height: 200px;
+    object-fit: cover;
 }
