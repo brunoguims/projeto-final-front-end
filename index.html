@@ -27,32 +27,32 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="receitas/brasileira.html">
-                                        <img src="images/c-brasileira.png" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/c-brasileira.png" class="d-block w-100 card-img" alt="Brasileira">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/acaraje.html">
-                                        <img src="images/acaraje.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/acaraje.jpg" class="d-block w-100 card-img" alt="Acarajé">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/baiao.html">
-                                        <img src="images/baiao.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/baiao.jpg" class="d-block w-100 card-img" alt="Baião">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/carreteiro.html">
-                                        <img src="images/carreteiro.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/carreteiro.jpg" class="d-block w-100 card-img" alt="Carreteiro">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/moqueca.html">
-                                        <img src="images/moqueca.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/moqueca.jpg" class="d-block w-100 card-img" alt="Moqueca">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/tacaca.html">
-                                        <img src="images/tacaca.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/tacaca.jpg" class="d-block w-100 card-img" alt="Tacaca">
                                     </a>
                                 </div>
                             </div>
@@ -69,6 +69,18 @@
                             <h5 class="card-title">Brasileira</h5>
                         </div>
                     </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const carouselBrasil = document.getElementById('carouselBrasil');
+                        const cardTitle = carouselBrasil.closest('.card').querySelector('.card-title');
+
+                        carouselBrasil.addEventListener('slide.bs.carousel', function(event) {
+                            const activeItem = event.relatedTarget;
+                            const imgAlt = activeItem.querySelector('img').alt;
+                            cardTitle.textContent = imgAlt;
+                        });
+                    });
+                </script>
                 </div>
                 <div class="col-md-3">
                     <div class="card" style="width: 18rem;">
