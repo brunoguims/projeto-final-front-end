@@ -91,37 +91,37 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <div id="carouselItalia" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="receitas/brasileira.html">
-                                        <img src="images/c-italiana.png" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/c-italiana.png" class="d-block w-100 card-img" alt="Italiana">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/tiramisu.html">
-                                        <img src="images/tiramisu.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/tiramisu.jpg" class="d-block w-100 card-img" alt="Tiramisu">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/spaghetti-alla-carbonara.html">
-                                        <img src="images/spaghetti-alla-carbonara.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/spaghetti-alla-carbonara.jpg" class="d-block w-100 card-img" alt="Espaguete à Carbonara">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/pizza-margherita.html">
-                                        <img src="images/pizza-margherita.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/pizza-margherita.jpg" class="d-block w-100 card-img" alt="Pizza Marguerita">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/lasagna-alla-bolognese.html">
-                                        <img src="images/lasagna-alla-bolognese.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/lasagna-alla-bolognese.jpg" class="d-block w-100 card-img" alt="Lasanha Milanesa">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="receitas/receitas_em_si/risotto-alla-milanese.html">
-                                        <img src="images/risotto-alla-milanese.jpg" class="d-block w-100 card-img" alt="...">
+                                        <img src="images/risotto-alla-milanese.jpg" class="d-block w-100 card-img" alt="Risoto à Milanesa">
                                     </a>
                                 </div>
                             </div>
@@ -137,8 +137,19 @@
                         <div class="card-body">
                             <h5 class="card-title">Italiana</h5>
                         </div>
-
                     </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const carouselBrasil = document.getElementById('carouselItalia');
+                            const cardTitle = carouselBrasil.closest('.card').querySelector('.card-title');
+    
+                            carouselBrasil.addEventListener('slide.bs.carousel', function(event) {
+                                const activeItem = event.relatedTarget;
+                                const imgAlt = activeItem.querySelector('img').alt;
+                                cardTitle.textContent = imgAlt;
+                            });
+                        });
+                    </script>
                 </div>
                 <div class="col-md-3">
                     <div class="card">
